@@ -3,8 +3,8 @@ Este repositorio contiene scripts utilizados para `Shell_2`, una máquina con vu
 
 ## Consideraciones de la máquina
 
-    - El host `192.168.44.134` no está editado en los scripts, la VM se utilizó con configuración NAT
-    - Uso de encabezado `X-Forwarded-For`
+    > El host `192.168.44.134` no está editado en los scripts, la VM se utilizó con configuración NAT
+    > Uso de encabezado `X-Forwarded-For`
     
 
 ## Impacto vulnerabilidad SQLi
