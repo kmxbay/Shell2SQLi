@@ -3,10 +3,13 @@ Este repositorio contiene scripts utilizados para `Shell_2`, una máquina con vu
 
 ## Consideraciones de la máquina
 
-    > El host `192.168.44.134` no está editado en los scripts, la VM se utilizó con configuración NAT
-    > Uso de encabezado `X-Forwarded-For`
-    
-
+Algunas consideraciones
+> El host `192.168.44.134` no está editado en los scripts, la VM se utilizó con configuración NAT
+> 
+> Uso de encabezado `X-Forwarded-For`
+> 
+> https://portswigger.net/web-security/sql-injection/blind/lab-time-delays-info-retrieval
+> 
 ## Impacto vulnerabilidad SQLi
 
 ### Procedimiento:
