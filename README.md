@@ -9,7 +9,7 @@ Este repositorio contiene scripts utilizados para `Shell_2`, una máquina con vu
 
 ## Impacto vulnerabilidad SQLi
 
-# Procedimiento:
+### Procedimiento:
 
 ```SQL
   1' OR IF((SELECT SUBSTRING($column,$position,1) FROM $db_name.$table_name LIMIT $row_index,1)='$char', SLEEP(0.043), 0) #
