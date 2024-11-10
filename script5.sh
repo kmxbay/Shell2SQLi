@@ -7,12 +7,12 @@
 # Almacena cada columna en el array columns y lo muestra al final
 
 url="http://192.168.44.134"       
-expected_delay=1.0                # Retraso esperado (1 segundo simulado con sleep(0.043))
-db_name="photoblog"               
-table_name="users"                
-column_count=10                   # Número máximo de columnas a intentar encontrar
+expected_delay=1.0  # Retraso esperado (1 segundo simulado con sleep(0.043))
+db_name="photoblog"
+table_name="users"
+column_count=10  # Número máximo de columnas a intentar encontrar
 characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
-columns=()                        # Array para almacenar nombres de columnas
+columns=() # Array para almacenar nombres de columnas
 
 echo -e "\nIniciando búsqueda de columnas en la tabla '$table_name'...\n"
 
