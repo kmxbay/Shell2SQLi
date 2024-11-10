@@ -8,10 +8,10 @@
 # La variable position se reinicia en cada iteración de tabla para evitar errores de posiciones previas.
 #  El script ahora verifica si tb_name está vacío después de un intento de descubrir una tabla. Si está vacío, significa que no hay más tablas, y el script termina.
 
-url="http://192.168.44.134"       
+url="http://192.168.44.134"
 expected_delay=1.0                # Retraso esperado equivalente a 1 segundo (sleep(0.043))
 db_name="photoblog"               # Base de datos a investigar
-tb_count=4                       
+tb_count=4
 characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
 
 echo -e "\nIniciando búsqueda de los nombres de las tablas en la base de datos '$db_name'...\n"
@@ -63,4 +63,3 @@ for ((tb_index=0; tb_index < tb_count; tb_index++)); do
         position=$((position + 1))
     done
 done
-
